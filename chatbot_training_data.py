@@ -6,7 +6,7 @@ timeframes = ['2013-02']
 for timeframe in timeframes:
     connection = sqlite3.connect('{}.db'.format(timeframe))
     c = connection.cursor()
-    limit = 5000 # how much data pulled into pandas data frame
+    limit = 500 # how much data pulled into pandas data frame
     last_unix = 0
     cur_length = limit
     counter = 0
@@ -35,5 +35,5 @@ for timeframe in timeframes:
 
     # get above information every 100,000 rows
     counter += 1
-    if counter % 20 == 0:
+    if counter % 1 == 0:
         print(counter * limit, 'rows completed so far')
