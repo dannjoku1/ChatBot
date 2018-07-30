@@ -94,7 +94,8 @@ if __name__ == "__main__":
     row_counter = 0
     paired_rows = 0
 
-    with open("/Users/dan/Documents/RC_{}".format(timeframe.split('-')[0], timeframe), buffering=1000) as f:
+    #with open("/Users/dan/Documents/RC_{}".format(timeframe.split('-')[0], timeframe), buffering=1000) as f:
+    with open("/Users/dan/Documents/RC_{}".format(timeframe), buffering=1000) as f:
         for row in f:
             #print(row)
             row_counter += 1

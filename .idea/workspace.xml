@@ -13,24 +13,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ChatBot$chatbot_database.coverage" NAME="chatbot_database Coverage Results" MODIFIED="1532517728490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChatBot$chatbot_database.coverage" NAME="chatbot_database Coverage Results" MODIFIED="1532587035161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="chatbot_database.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chatbot_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="87" column="26" lean-forward="true" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+            <state relative-caret-position="405">
+              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1532517652090" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
-                <marker date="1532517652090" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
-                <marker date="1532517652090" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
-                <marker date="1532517652090" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
-                <marker date="1532517652090" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
-                <marker date="1532517652090" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
-                <marker date="1532517652090" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
+                <marker date="1532586893105" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
+                <marker date="1532586893105" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
+                <marker date="1532586893105" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
+                <marker date="1532586893105" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
+                <marker date="1532586893105" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
+                <marker date="1532586893105" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
+                <marker date="1532586893105" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
               </folding>
             </state>
           </provider>
@@ -48,6 +48,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>body</find>
+      <find>db</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,30 +205,30 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1532517652090" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
-            <marker date="1532517652090" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
-            <marker date="1532517652090" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
-            <marker date="1532517652090" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
+            <marker date="1532586893105" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chatbot_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="87" column="26" lean-forward="true" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+        <state relative-caret-position="405">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1532517652090" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
-            <marker date="1532517652090" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
-            <marker date="1532517652090" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
-            <marker date="1532517652090" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
-            <marker date="1532517652090" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="220:377" ph="CREATE TABLE... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="570:631" ph="SELECT score... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="1308:1372" ph="SELECT comme... parent_reply" />
+            <marker date="1532586893105" expanded="true" signature="1842:1859" ph="BEGIN TRANSA... " />
+            <marker date="1532586893105" expanded="true" signature="2248:2381" ph="UPDATE parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="2744:2873" ph="INSERT INTO parent_reply... " />
+            <marker date="1532586893105" expanded="true" signature="3213:3329" ph="INSERT INTO parent_reply... " />
           </folding>
         </state>
       </provider>
