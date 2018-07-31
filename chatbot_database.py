@@ -2,16 +2,14 @@ import sqlite3
 import json
 from datetime import datetime
 
-timeframe = '2013-02'
+timeframe = '2015-05'
 sql_transaction = []
 
 connection = sqlite3.connect('{}.db'.format(timeframe))
 c = connection.cursor()
 
 def create_table():
-    c.execute("""CREATE TABLE IF NOT EXISTS parent_reply
-(parent_id TEXT PRIMARY KEY, comment_id TEXT UNIQUE, parent TEXT,
-comment TEXT, subreddit TEXT, unix INT, score INT )""")
+    c.execute("CREATE TABLE IF NOT EXISTS parent_reply(parent_id TEXT PRIMARY KEY, comment_id TEXT UNIQUE, parent TEXT, comment TEXT, subreddit TEXT, unix INT, score INT)")
 
 def format_data(data):
     data = data.replace("\n"," newlinechar ").replace("\r"," newlinechar ").replace('"',"'")
@@ -36,7 +34,9 @@ def acceptable(data):
         return False
     elif len(data) > 1000:
         return False
-    elif data == '[deleted]' or data == '[removed]': # deleted/removed comments
+    elif data == '[deleted]':
+        return False
+    elif data == '[removed]':
         return False
     else:
         return True
@@ -97,30 +97,32 @@ if __name__ == "__main__":
     #with open("/Users/dan/Documents/RC_{}".format(timeframe.split('-')[0], timeframe), buffering=1000) as f:
     with open("/Users/dan/Documents/RC_{}".format(timeframe), buffering=1000) as f:
         for row in f:
-            #print(row)
             row_counter += 1
             row = json.loads(row)
             parent_id = row['parent_id']
-            comment_id = row['name']
             body = format_data(row['body'])
             created_utc = row['created_utc']
             score = row['score']
+            comment_id = row['name']
             subreddit = row['subreddit']
             parent_data = find_parent(parent_id)
-            # if more than one person upvoted the post
             if score >= 2:
-                if acceptable(body):
-                    existing_comment_score = find_existing_score(parent_id) #is there a reply that has a score greater than current score
-                    if existing_comment_score:
-                        if score > existing_comment_score:
-                            sql_insert_replace_comment(comment_id, parent_id, parent_data, body, created_utc, score, subreddit)
+                existing_comment_score = find_existing_score(parent_id)
+                if existing_comment_score:
+                    if score > existing_comment_score:
+                        if acceptable(body):
+                            sql_insert_replace_comment(comment_id, parent_id, parent_data, body, subreddit,
+                                                       created_utc, score)
 
-                    else: # if there isn't an existing comment score...
+                else:
+                    if acceptable(body):
                         if parent_data:
-                            sql_insert_has_parent(comment_id, parent_id, parent_data, body, created_utc, score, subreddit)
+                            sql_insert_has_parent(comment_id, parent_id, parent_data, body, subreddit, created_utc,
+                                                  score)
                             paired_rows += 1
                         else:
-                            sql_insert_no_parent(comment_id, parent_id, body, created_utc, score, subreddit)
+                            sql_insert_no_parent(comment_id, parent_id, body, subreddit, created_utc, score)
 
             if row_counter % 100000 == 0:
-                print('Total Rows Read: {}, Paired Rows: {}, Time: {}'.format(row_counter, paired_rows, str(datetime.now())))
+                print('Total Rows Read: {}, Paired Rows: {}, Time: {}'.format(row_counter, paired_rows,
+                                                                              str(datetime.now())))
